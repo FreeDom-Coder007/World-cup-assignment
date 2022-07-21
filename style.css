@@ -29,15 +29,16 @@
 .banner-title h1,p{
     color: #fff;
 }
-.banner-title p{
-    font-weight: 400;
-    font-size: 16px;
-}
 .banner-title h1{
     font-weight: 700;
     font-size: 70px;
     line-height: 80px;
 }
+.banner-title p{
+    font-weight: 400;
+    font-size: 16px;
+}
+
 .banner-title .button{
     display: flex;
     justify-content: center;
@@ -62,19 +63,6 @@
     justify-content: space-between;
     margin: auto;
     margin-top: 130px;
-}
-.matches{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
-    row-gap: 20px;
-}
-.match{
-    border: 1px solid #E8E8E8;
-    border-radius: 10px;
-}
-.match .thumbnail-info{
-    padding: 15px 18px;
 }
 .side-bar nav{
     background-color: #161616;
@@ -101,6 +89,19 @@
     background-color: #DD0000;
     color: #fff;
 }
+.matches{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.match{
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+}
+.match .thumbnail-info{
+    padding: 15px 18px;
+}
 .thumbnail-info .thumbnail-icon .fa-clock,.fa-message{
   margin-right: 10px;  
 }
@@ -110,9 +111,7 @@
     padding: 5px 15px;
     font-weight: 600;
 }
-.thumbnail-info .paragraph{
-    color: #000;
-}
+
 
 /* ----Footer section styles------ */
 footer{
@@ -156,11 +155,16 @@ footer > hr{
     font-size: 50px;
     margin: auto 20px;
 }
+/* -------------------------Second page------------------------- */
+.thumb-paragraph{
+    color: #000;
+}
+
 
 /* -----Responsivnes----------*/ 
 
 /* --Mobile devices-- */
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 688px) {
     .banner{
         display: flex;
         flex-direction: column;
@@ -220,6 +224,44 @@ footer > hr{
         flex-direction: column;
         row-gap: 50px;
         align-items: center;
+    }
+}
+
+/* -----Tablet or Medium screen devices----- */
+@media only screen and (min-width: 689px) and (max-width: 992px){
+    .banner-title{
+        padding-bottom: 20px;
+    }
+    .banner-title > h1{
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 8px;
+    }
+    .banner-title > p{
+        font-size: 14px;
+        line-height: 24px;
+    }
+ 
+    /* -----Subscription section------  */
+    .subscription-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 834px;
+    }
+    .side-bar nav{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       background-color: #fff;
+    }
+    .matches{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-right: 10%;
+    }
+    .match-9{
+        display: none;
     }
 }
 
